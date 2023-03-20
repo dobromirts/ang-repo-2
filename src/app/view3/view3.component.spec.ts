@@ -1,5 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+import { IgxCategoryChartModule } from 'igniteui-angular-core';
 import { View3Component } from './view3.component';
 
 describe('View3Component', () => {
@@ -8,10 +11,13 @@ describe('View3Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ View3Component ]
+      declarations: [ View3Component ],
+      imports: [ NoopAnimationsModule, FormsModule, IgxCategoryChartModule ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(View3Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
